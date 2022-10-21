@@ -22,11 +22,11 @@ Mais do que uma conveniência moderna, o verdadeiro poder do web scraping está 
 > 3. Para setup do Datastore em modo Datastore: [Instalação](https://cloud.google.com/datastore/docs/store-query-data)
 > 4. Crie uma conta de serviço com permissões de leitura e escrita para o Datastore. [passo-a-passo](https://console.cloud.google.com/iam-admin/serviceaccounts/create)
 > 	4.1- Para criar um KEY para esta nova conta, clique na conta criada > clique na aba "KEYS" > clique no botão "Add Key" > clique em Create New Key > Selecione JSON. Baixe o seu json dentro do projeto, na pasta [/key]() e renomeie-o para "service-account.json"
-> 5. Altere a variável PROJECT_ID dentro do arquivo [/app/config/index.js]() com o ID de seu projeto no GCP.
-> 6. Altere a variável PROJECT_ID dentro do arquivo [/package.json]() com o ID de seu projeto no GCP.
-> 7. Altere a variável PROJECT_ID dentro do arquivo [/app.yaml]() com o ID de seu projeto no GCP.
+> 5. Altere a variável PROJECT_ID dentro do arquivo [/app/config/index.js](https://github.com/N4W-Web-Solutions/web-scraping/blob/main/app/config/index.js) com o ID de seu projeto no GCP.
+> 6. Altere a variável PROJECT_ID dentro do arquivo [/package.json](https://github.com/N4W-Web-Solutions/web-scraping/blob/main/package.json) com o ID de seu projeto no GCP.
+> 7. Altere a variável PROJECT_ID dentro do arquivo [/app.yaml](https://github.com/N4W-Web-Solutions/web-scraping/blob/main/app.yaml) com o ID de seu projeto no GCP.
 > 7. Caso não exista a pasta
-> 8. Executar o comando de deploy: ```npm run deploy```. Este comando fará o deploy de seu serviço no [Google App Engine - GAE](https://console.cloud.google.com/appengine) com os seguintes parâmetros configurados no arquivo [/app.yaml]()
+> 8. Executar o comando de deploy: ```npm run deploy```. Este comando fará o deploy de seu serviço no [Google App Engine - GAE](https://console.cloud.google.com/appengine) com os seguintes parâmetros configurados no arquivo [/app.yaml](https://github.com/N4W-Web-Solutions/web-scraping/blob/main/app.yaml)
 > ```yaml
 > runtime: nodejs14
 > env: standard
@@ -48,3 +48,6 @@ Mais do que uma conveniência moderna, o verdadeiro poder do web scraping está 
 2. Execute o ***endpoint*** ```(GET) /veiculos``` para listar todos veículos cadastados.
 3. Execute o ***endpoint*** ```(POST) /sitemap``` para começar a varrer as urls do sitemap cadastado (veículo), salvando-as no database.
 4. Execute o ***endpoint*** ```(POST) /readnews``` para ler todos os htmls dos urls salvos no database, extraindo os campos que estão nos modelos de dados.
+
+# Suporte
+Para suporte, me envie um e-mail: <desenvolvedor@outlook.com>

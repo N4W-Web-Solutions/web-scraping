@@ -7,7 +7,7 @@
     "start:dev": "env PORT=8080 GOOGLE_APPLICATION_CREDENTIALS=./key/service-account.json nodemon server.js",
     "deploy": "gcloud app deploy app.yaml --project=[PROJECT_ID]"
   },
-  "author": "Piero Ribeiro (piero.webmaster@gmail.com)",
+  "author": "Piero Ribeiro (desenvolvedor@outlook.com)",
   "license": "GNU",
   "dependencies": {
     "@google-cloud/datastore": "^7.0.0",
