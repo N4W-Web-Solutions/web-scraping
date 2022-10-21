@@ -22,11 +22,12 @@ Mais do que uma conveniência moderna, o verdadeiro poder do web scraping está 
 > 3. Para setup do Datastore em modo Datastore: [Instalação](https://cloud.google.com/datastore/docs/store-query-data)
 > 4. Crie uma conta de serviço com permissões de leitura e escrita para o Datastore. [passo-a-passo](https://console.cloud.google.com/iam-admin/serviceaccounts/create)
 > 	4.1- Para criar um KEY para esta nova conta, clique na conta criada > clique na aba "KEYS" > clique no botão "Add Key" > clique em Create New Key > Selecione JSON. Baixe o seu json dentro do projeto, na pasta [/key]() e renomeie-o para "service-account.json"
-> 5. Altere a variável PROJECT_ID dentro do arquivo [/app/config/index.js](https://github.com/N4W-Web-Solutions/web-scraping/blob/main/app/config/index.js) com o ID de seu projeto no GCP.
-> 6. Altere a variável PROJECT_ID dentro do arquivo [/package.json](https://github.com/N4W-Web-Solutions/web-scraping/blob/main/package.json) com o ID de seu projeto no GCP.
-> 7. Altere a variável PROJECT_ID dentro do arquivo [/app.yaml](https://github.com/N4W-Web-Solutions/web-scraping/blob/main/app.yaml) com o ID de seu projeto no GCP.
-> 7. Caso não exista a pasta
-> 8. Executar o comando de deploy: ```npm run deploy```. Este comando fará o deploy de seu serviço no [Google App Engine - GAE](https://console.cloud.google.com/appengine) com os seguintes parâmetros configurados no arquivo [/app.yaml](https://github.com/N4W-Web-Solutions/web-scraping/blob/main/app.yaml)
+> 5. Execute ```npm install``` na raiz do projeto, para executar a instalação das dependências. 
+> 6. Altere a variável PROJECT_ID dentro do arquivo [/app/config/index.js](https://github.com/N4W-Web-Solutions/web-scraping/blob/main/app/config/index.js) com o ID de seu projeto no GCP.
+> 7. Altere a variável PROJECT_ID dentro do arquivo [/package.json](https://github.com/N4W-Web-Solutions/web-scraping/blob/main/package.json) com o ID de seu projeto no GCP.
+> 8. Altere a variável PROJECT_ID dentro do arquivo [/app.yaml](https://github.com/N4W-Web-Solutions/web-scraping/blob/main/app.yaml) com o ID de seu projeto no GCP.
+> 9. Caso não exista a pasta
+> 10. Executar o comando de deploy: ```npm run deploy```. Este comando fará o deploy de seu serviço no [Google App Engine - GAE](https://console.cloud.google.com/appengine) com os seguintes parâmetros configurados no arquivo [/app.yaml](https://github.com/N4W-Web-Solutions/web-scraping/blob/main/app.yaml)
 > ```yaml
 > runtime: nodejs14
 > env: standard
@@ -40,8 +41,8 @@ Mais do que uma conveniência moderna, o verdadeiro poder do web scraping está 
 > env_variables:
 >   GOOGLE_APLLICATION_ID: [ID_DO_PROJETO]
 > ```
-> 9. Via "POSTMAN", acessar as urls do serviço abaixo (Postman Collection na raíz do projeto, bastando alterar a url do serviço)
-> 10. Para verificar os dados, acesse o [Google Datastore](https://console.cloud.google.com/datastore]) de seu projeto.
+> 11. Via "POSTMAN", acessar as urls do serviço abaixo (Postman Collection na raíz do projeto, bastando alterar a url do serviço)
+> 12. Para verificar os dados, acesse o [Google Datastore](https://console.cloud.google.com/datastore]) de seu projeto.
 
 # Execução do serviço
 1. Execute o ***endpoint*** ```(POST) /veiculos``` para cadastrar um novo veículo de notícia, com os parâmetros setados conforme a Coleção do Postman disponibilizada. Este serviço somente deve ser executado quando houver um novo veículo para ser cadastrado.
