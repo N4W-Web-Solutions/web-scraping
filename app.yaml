@@ -1,0 +1,11 @@
+runtime: nodejs14
+env: standard
+service: default
+automatic_scaling:
+  min_instances: 1
+  max_instances: 1
+network:
+  instance_tag: appengine-webscraping-service
+  subnetwork_name: subnet-eua
+env_variables:
+  GOOGLE_APLLICATION_ID: [ID_DO_PROJETO]
